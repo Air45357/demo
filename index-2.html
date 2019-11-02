@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+     <title>YourHome-家庭室内设计</title>
+     <meta charset="utf-8">
+     <meta name = "format-detection" content = "telephone=no" />
+     <link rel="icon" href="images/favicon.ico">
+     <link rel="shortcut icon" href="images/favicon.ico" />
+     <link rel="stylesheet" href="css/touchTouch.css">
+     <link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+     <link rel="stylesheet" href="css/style.css">
+     <script src="js/jquery.js"></script>
+     <script src="js/jquery-migrate-1.2.1.js"></script>
+     <script src="js/script.js"></script> 
+     <script src="js/superfish.js"></script>
+     <script src="js/jquery.ui.totop.js"></script>
+     <script src="js/jquery.equalheights.js"></script>
+     <script src="js/jquery.mobilemenu.js"></script>
+     <script src="js/jquery.easing.1.3.js"></script>
+      <script src="js/jquery.tooltipster.js"></script>
+     <script src="js/touchTouch.jquery.js"></script>
+		 <style type="text/css">
+			#dropArea {width:150px;height:	20px;padding:10px;border:3px solid #EEEEEE;border-radius: 25px;background-color: #EEEEEE;}
+			#dropArea.hover {background-color: #009B97;}
+			.div1{font-size: 16px; font-weight:600; color:#009B97;}
+			.button{width: 100px;height: 30px;background: #009B97;;border: 1px solid #009B97;border-radius: 25px;}
+		 </style>
+     <script>
+       $(document).ready(function(){
+        $('.gallery a.gal').touchTouch();
+        $().UItoTop({ easingType: 'easeOutQuart' });
+        $('.tooltip').tooltipster();
+        });
+     </script>
+		 
+		 <script type="text/javascript">
+			function allowDrop(ev)
+			{
+			ev.preventDefault();
+			document.getElementById('dropArea').className = 'hover';
+			}
+
+			function drop(ev)
+			{
+				ev.preventDefault();
+				document.getElementById('dropArea').className = "";
+				document.getElementById('fileinfo').innerHTML = "共选择了" + ev.dataTransfer.files.length.toString() + "个文件";
+				for(var  i=0;i< ev.dataTransfer.files.length;i++)
+				{
+					 document.getElementById('fileinfo').innerHTML += "<br>文件名:" + ev.dataTransfer.files[i].name + "; 文件大小:"+ev.dataTransfer.files[i].size + "字节";
+				}
+			}
+			</script>
+     </head>
+     
+     <body class="" id="top">
+    
+<!--==============================头部=================================--> 
+<header>  
+  <div class="container_12">
+    <div class="grid_12">
+        <h1>
+        <a href="index-1.html">
+          <img src="images/logo.png" alt="您的幸福家庭!">
+        </a>
+      </h1>
+        <div class="menu_block ">
+          <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+            <ul class="sf-menu">
+                 <li><a href="index-1.html">主页</a></li>
+                 <li class="current"><a href="index-2.html">展示</a></li>
+                 <li><a href="index-3.html">博客</a></li>
+                 <li><a href="index-4.html">导航</a></li>
+               </ul>
+            </nav>
+           <div class="clear"></div>
+        </div>
+      </div>      
+   </div>
+</header>
+<!--==============================内容=================================-->
+<div class="content"><div class="ic"></div>
+  <div class="container_12">
+    <div class="grid_12">
+      <h3>部分展示</h3><br />
+			<div class="alleft">
+				<div class="div1">您也可以上传您的优秀展示作品！</div><br />
+			<div id="dropArea" ondrop="drop(event)" ondragover="allowDrop(event)">请把作品文件拖放到这!</div><br />
+      <div id="fileinfo" ></div>
+			<button type="button" class="button">上传</button>
+			</div>			
+    </div>
+    <div class="clear"></div>
+    <div class="gallery">
+			
+      <div class="grid_4"><a href="images/big1.jpg" class="gal"><img src="images/page3_img1.jpg" alt=""></a></div>
+      <div class="grid_4"><a href="images/big2.jpg" class="gal"><img src="images/page3_img2.jpg" alt=""></a></div>
+      <div class="grid_4"><a href="images/big3.jpg" class="gal"><img src="images/page3_img3.jpg" alt=""></a></div>
+      <div class="clear"></div>
+      <div class="grid_4"><a href="images/big4.jpg" class="gal"><img src="images/page3_img4.jpg" alt=""></a></div>
+      <div class="grid_4"><a href="images/big5.jpg" class="gal"><img src="images/page3_img5.jpg" alt=""></a></div>
+      <div class="grid_4"><a href="images/big6.jpg" class="gal"><img src="images/page3_img6.jpg" alt=""></a></div>
+    </div>
+  </div>
+</div>
+<!--==============================底部=================================-->
+<footer>   
+    <div class="container_12">
+      
+      <div class="grid_12">
+      <div class="socials">
+      <section id="Sina">
+        <a href="https://www.sina.com/" target="_blank"><span id="Sina" class="tooltip" title="在新浪上联系我们">新浪</span></a>
+        </section>
+        <section id="Tencent">
+        <a href="https://www.qq.com/" target="_blank"><span id="Tencent" class="tooltip" title="在腾讯上关注我们">腾讯</span></a>
+        </section>      
+        <section id="Sohu">
+        <a href="http://www.sohu.com/" target="_blank"><span id="Sohu" class="tooltip" title="在搜狐上关注我们">搜狐</span></a>
+        </section>             
+        </div>
+        <div class="copy">
+        Copyright &copy; 2019.Company name All rights reserved.
+        </div>
+         
+      </div>
+    </div>  
+</footer>
+    <script src="js/classie.js"></script>
+
+    <script src="js/thumbnailGridEffects.js"></script>
+
+<div style="display:none"><script src='http//v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+
+</body>
+</html>
+
